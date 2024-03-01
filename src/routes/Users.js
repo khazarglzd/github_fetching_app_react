@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import UsersContainer from '../components/UsersContainer';
+import Loading from '../components/Loading';
 
 const Users = () => {
     const [users, setUsers] = useState([]);
@@ -74,7 +75,7 @@ const Users = () => {
                     </button>
                 </div>
             </div>
-            <div>{<UsersContainer users={users} />}</div>
+            <div>{loading ? <Loading /> : <UsersContainer users={users} />}</div>
         </div>
     );
 };
