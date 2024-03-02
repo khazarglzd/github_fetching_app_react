@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from './components/Logo'
 import Users from './routes/Users'
 import { Routes, Route } from "react-router-dom"
+import UserInfo from './routes/UserInfo'
 
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
         <Logo />
         <Routes>
           <Route path='/' element={<Users />}></Route>
+          <Route path='/:name' element={<UserInfo />}></Route>
         </Routes>
       </div>
     </div>
