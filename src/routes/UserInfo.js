@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import UsersContainer from "../components/UsersContainer";
+import Tabs from "../components/Tabs";
 
 const UserInfo = () => {
     const [user, setUser] = useState([]);
+    const [type, setType] = useState("repos");
 
 
     let EndPoint = "https://api.github.com/users";
@@ -45,18 +47,18 @@ const UserInfo = () => {
                         <div className="text-lg leading-10 px-3">
                             <h1 className="text-3xl pb-4">{uinfo.name}</h1>
                             <h1>
-                                <span className="text-green-500">Login_name</span> :{uinfo.login}
+                                <span className="text-green-500">Login Name</span> :{uinfo.login}
                             </h1>
                             <h1>
-                                <span className="text-green-500">followers : </span>
+                                <span className="text-green-500">Followers : </span>
                                 {uinfo.followers}
                             </h1>
                             <h1>
-                                <span className="text-green-500">following : </span>
+                                <span className="text-green-500">Following : </span>
                                 {uinfo.following}
                             </h1>
                             <h1>
-                                <span className="text-green-500">public_repositories : </span>
+                                <span className="text-green-500">Public Repositories : </span>
                                 {uinfo.public_repos}
                             </h1>
                             <h1>
@@ -74,7 +76,7 @@ const UserInfo = () => {
                         </div>
                     </div>
                 ))}
-
+            <Tabs type={type} setType={setType} />
         </div>
     );
 };
