@@ -8,7 +8,7 @@ const Users = () => {
     const user = useRef("");
     let EndPoint = "https://api.github.com/users";
 
-    async function AllUesrs() {
+    async function AllUsers() {
         if (user.current.value === "") {
             setLoading(true);
             const res = await fetch(EndPoint);
@@ -28,14 +28,14 @@ const Users = () => {
             console.log(users);
             user.current.value = "";
         } else {
-            AllUesrs();
+            AllUsers();
         }
         setLoading(null);
     }
 
 
     useEffect(() => {
-        AllUesrs();
+        AllUsers();
     }, [user, setUsers]);
 
 
