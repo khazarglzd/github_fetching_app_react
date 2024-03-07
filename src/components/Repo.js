@@ -4,7 +4,8 @@ const Repo = ({ users }) => {
     return (
         <>
             {users.map((repo, idx) => (
-                <div key={idx} className="bg-white p-3 leading-8">
+                <div key={idx} className="flex border rounded-md
+                p-3 flex-col  shadow-[0_2px_5px_rgb(0,0,0,0.2)] max-w-xs transition duration-100 ease-in-out hover:scale-110 hover:shadow-lg dark:hover:shadow-black/30">
                     <a
                         href={repo.html_url}
                         target="_blank"

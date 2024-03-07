@@ -13,7 +13,7 @@ const Tabs = ({ type, setType }) => {
                 className={`${type === "received_events" && "text-green-500"}`}
                 onClick={() => setType("received_events")}
             >
-                Activity
+                Activities
             </button>
             <button
                 className={`${type === "followers" && "text-green-500"}`}

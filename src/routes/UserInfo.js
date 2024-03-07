@@ -88,7 +88,7 @@ const UserInfo = () => {
                 </div>
             )}
             {type === "received_events" && (
-                <div className="grid md:grid-cols-2 grid-cols-1 mt-6 gap-7 w-10/12 mx-auto ">
+                <div className="grid md:grid-cols-3 grid-cols-1 mt-6 gap-7 w-10/12 mx-auto ">
                     {users && <Events data={users} />}
                 </div>
             )}
